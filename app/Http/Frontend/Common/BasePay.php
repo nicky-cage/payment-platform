@@ -31,9 +31,9 @@ class BasePay
      * 异步回调地址
      * @var string
      */
-    protected static string $notifyUrl = 'https://api.pay.pusta.click/payments/notify';
-    protected static string $notifyURLDev = 'https://api.pay.pusta.click/payments/notify';
-    protected static string $notifyURLPro = 'https://p.tjtspay.com/payments/notify';
+    protected static string $notifyUrl = 'https://api.pay.test-ake88system.com/payments/notify';
+    protected static string $notifyURLDev = 'https://api.pay.test-ake88system.com/payments/notify';
+    protected static string $notifyURLPro = 'https://api.pay.test-ake88system.com/payments/notify';
 
     /**
      * 目前可用的支付渠道
@@ -54,6 +54,7 @@ class BasePay
         'PHJ' => HuangJiaPay::class,        // 皇家支付
         'PLU' => LvLvPay::class,            // LVLV
         'LV2' => LvV2Pay::class,            // lv - 新 qq 支付
+        'AIR' => AirPay::class, // Air pay
     ];
     use BaseJsonTrait;
 
@@ -116,8 +117,8 @@ class BasePay
         }
         // - 判断支付金额区间
         if ($payInfo->amounts && !in_array($amount, array_map(function ($r) {
-                return trim($r);
-            }, explode(',', $payInfo->amounts)))) {
+            return trim($r);
+        }, explode(',', $payInfo->amounts)))) {
             return self::jsonErr('支付金额必须在 [' . $payInfo->amounts . '] 之间');
         }
         if ($amount < $payInfo->amount_min || $amount > $payInfo->amount_max) { // 金额必须在固定区间之内
@@ -282,8 +283,13 @@ class BasePay
         }
 
         $getResult = function () use ($app, $order) {
-            $signStr = sprintf('app_id=%d&merchant_id=%d&order_number=%s&status=%d&key=%s',
-                $app->id, $app->merchant_id, $order->order_number, $order->state, $app->key
+            $signStr = sprintf(
+                'app_id=%d&merchant_id=%d&order_number=%s&status=%d&key=%s',
+                $app->id,
+                $app->merchant_id,
+                $order->order_number,
+                $order->state,
+                $app->key
             );
             $sign = strtoupper(md5($signStr));
             return [
@@ -336,8 +342,14 @@ class BasePay
         }
 
         $getResult = function () use ($app, $order) {
-            $signStr = sprintf('amount=%d&app_id=%d&merchant_id=%d&order_number=%s&status=%d&key=%s',
-                intval($order->amount_paid), $app->id, $app->merchant_id, $order->order_number, $order->state, $app->key
+            $signStr = sprintf(
+                'amount=%d&app_id=%d&merchant_id=%d&order_number=%s&status=%d&key=%s',
+                intval($order->amount_paid),
+                $app->id,
+                $app->merchant_id,
+                $order->order_number,
+                $order->state,
+                $app->key
             );
             $sign = strtoupper(md5($signStr));
             return [
