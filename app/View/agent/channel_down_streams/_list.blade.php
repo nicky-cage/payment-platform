@@ -1,0 +1,14 @@
+@foreach ($rows as $k => $r)
+    <tr @if ($k == 0)total="{{$total}}"@endif>
+        <td>{{$r->id}}</td>
+        <td>{{$r->up_stream_id}}</td>
+        <td>{{$r->up_stream_name}}</td>
+        <td>{{$r->code}}</td>
+        <td>{{$r->fee}}</td>
+        <td>{{$r->fee_min}}</td>
+        <td>{{$r->created}}</td>
+        <td>
+            <button class="layui-btn sp-open-link" url="/{{$controller}}/update" area="750px,480px">编辑</button>
+        </td>
+    </tr>
+@endforeach

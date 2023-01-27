@@ -1,0 +1,126 @@
+.layui-table th { text-align: center; font-size: 11px; font-weight: bold; }
+.layui-table td { padding: 0px; height: 25px; font-size: 11px; text-align: center; vertical-align: middle }
+.layui-table td .mt5 { margin-top: 5px;}
+.layui-table td.sp-label { font-size: 11px; color: #666666; line-height: 15px; }
+.layui-btn { height: 25px; line-height: 25px; padding: 0px 10px 0px 10px; font-size: 11px; }
+.layui-btn + .layui-btn { margin-left: 5px; }
+.layui-form-switch { margin-top: 0px; }
+.layui-input-inline span { height: 11px; line-height: 11px;}
+.layui-form-checkbox span { height: 30px; line-height: 30px;}
+.layui-input-inline .sp-text { height: 38px; line-height: 38px;}
+
+/* .layui-card-header { padding:0px; } */
+.layui-form-label { padding: 3px 5px 5px 0px;}
+.layui-form-inline .layui-form-label { padding-top: 11px; }
+.layui-tab-content { padding-left: 0px; padding-right: 0px; }
+
+.radio-images .layui-form-radio { margin-right: 0px; padding: 0px; }
+
+.w100 { width: 100px; }
+.w150 { width: 150px; }
+.w200 { width: 200px; }
+.w250 { width: 250px; }
+.w300 { width: 300px; }
+
+.user-label { font-size: 11px; color: #666666; line-height: 11px; float: left; height: 11px; border-radius: 3px; padding-top: 3px; }
+.user-label + .user-label { margin-top: 1px; }
+.red { color: red; }
+.green { color: green; }
+
+.no-padding-lr { padding-left: 0px; padding-right: 0px; }
+.no-shadow { box-shadow: none; }
+
+.sp-form-date { cursor: pointer; }
+.sp-form-datetime { cursor: pointer; }
+
+.sp-show-image { color: #999999; cursor: pointer; }
+
+.layui-input { height: 28px; line-height: 28px; }
+
+/** 修改原来样式 **/
+@media screen and (max-width: 1368px) {
+  .layadmin-shortcut li cite { font-size: 11px; }
+  .layui-nav { font-size: 11px; }
+  .layui-card-header { font-size: 11px; }
+  .layui-table td { font-size: 11px; text-align: center; height: 25px; line-height: 25px; }
+  .layadmin-takerates .layui-progress h3 { font-size: 11px; }
+  .layui-side-menu .layui-nav .layui-nav-item > a { font-size: 11px; }
+  html { font-size: 11px; }
+  body { font-size: 11px; }
+  .layui-table td { font-size: 11px; text-align: center; padding: 0px 5px; }
+  .layui-table th { font-size: 11px; text-align: center; font-weight: bold; height: 28px; line-height: 28px; padding: 3px 10px 0px 10px; }
+  .layui-tab-title li { font-size: 11px; }
+  .layui-btn { font-size: 11px; }
+
+  .layui-input-search { height: 25px; line-height: 25px; font-size: 11px;}
+
+  .layui-input { height: 23px; line-height: 23px; font-size: 11px; padding-top: 2px;}
+
+  .layui-laydate { font-size: 11px; }
+
+  .layui-nav-child a { font-size: 11px; }
+  .layui-nav a { font-size: 11px; }
+
+  .layui-side-menu .layui-nav .layui-nav-item a { font-size: 11px; height: 30px; line-height: 30px;  }
+  .layui-nav * { font-size: 11px; }
+  a cite { font-size: 11px; }
+  .layui-icon { font-size: 11px; }
+  .layadmin-user-login-icon { font-size: 11px; line-height: 25px; width: 32px; height: 25px; }
+
+  .layui-form-checkbox span { height: 25px;  font-size: 11px; }
+  .layui-form-item .layui-form-checkbox[lay-skin="primary"] { margin-top: 15px; }
+
+  .layui-side-menu .layui-nav .layui-nav-item a { height: 36px; line-height: 36px; font-size: 13px; }
+
+  .layui-tab-title li { font-size: 11px; height: 32px; line-height: 32px; padding-top: 3px; }
+  .layui-tab-title { height: 32px; }
+  .layui-tab-title .layui-this { height: 32px; line-height: 32px;}
+  .layui-tab-title .layui-this::after { height: 33px; }
+
+  .layui-card-header.layuiadmin-card-header-auto { padding-top: 5px; padding-bottom: 5px;}
+
+  .layui-form-item { line-height: 40px; }
+  .layui-form-inline .layui-form-checkbox[lay-skin="primary"] span { padding-top: 11px; }
+}
+/* .layadmin-shortcut li cite { font-size: 11px; }
+.layui-nav { font-size: 11px; }
+.layui-card-header { font-size: 11px; }
+.layui-table td { font-size: 11px; text-align: center; height: 25px; line-height: 25px; }
+.layadmin-takerates .layui-progress h3 { font-size: 11px; }
+.layui-side-menu .layui-nav .layui-nav-item > a { font-size: 11px; }
+html { font-size: 11px; }
+body { font-size: 11px; }
+.layui-table td { font-size: 11px; text-align: center; padding: 0px 5px; }
+.layui-table th { font-size: 11px; text-align: center; font-weight: bold; height: 28px; line-height: 28px; padding: 3px 10px 0px 10px; }
+.layui-tab-title li { font-size: 11px; }
+.layui-btn { font-size: 11px; }
+
+.layui-input-search { height: 25px; line-height: 25px; font-size: 11px;}
+
+.layui-input { height: 23px; line-height: 23px; font-size: 11px; padding-top: 2px;}
+
+.layui-laydate { font-size: 11px; }
+
+.layui-nav-child a { font-size: 11px; }
+.layui-nav a { font-size: 11px; }
+
+.layui-side-menu .layui-nav .layui-nav-item a { font-size: 11px; height: 30px; line-height: 30px;  }
+.layui-nav * { font-size: 11px; }
+a cite { font-size: 11px; }
+.layui-icon { font-size: 11px; }
+.layadmin-user-login-icon { font-size: 11px; line-height: 25px; width: 32px; height: 25px; }
+
+.layui-form-checkbox span { height: 25px;  font-size: 11px; }
+.layui-form-item .layui-form-checkbox[lay-skin="primary"] { margin-top: 15px; }
+
+.layui-side-menu .layui-nav .layui-nav-item a { height: 36px; line-height: 36px; font-size: 13px; }
+
+.layui-tab-title li { font-size: 11px; height: 32px; line-height: 32px; padding-top: 3px; }
+.layui-tab-title { height: 32px; }
+.layui-tab-title .layui-this { height: 32px; line-height: 32px;}
+.layui-tab-title .layui-this::after { height: 33px; }
+
+.layui-card-header.layuiadmin-card-header-auto { padding-top: 5px; padding-bottom: 5px;}
+
+.layui-form-item { line-height: 40px; }
+.layui-form-inline .layui-form-checkbox[lay-skin="primary"] span { padding-top: 11px; } */
