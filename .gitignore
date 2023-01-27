@@ -11,3 +11,5 @@ docs/._统一支付对接.docx
 docs/.~统一支付对接.docx
 
 .DS_Store
+
+redis.conf
