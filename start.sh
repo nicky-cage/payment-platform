@@ -10,12 +10,6 @@ branch='main'
 app_port=`cat .env| grep APP_PORT | awk '{ print $3 }'`
 
 function kill_process() { 
-    for p in `ps aux | grep 'watcher.php start' | grep -v grep  | awk '{ print $2 }'`; do 
-        kill -9 $p
-    done
-    for p in `ps aux | grep 'hyperf.php server:watch' | grep -v grep | awk '{ print $2 }'`; do
-        kill -9 $p
-    done
     for p in `lsof -i:${app_port} | awk 'NR > 1  { print $2 }'`; do
         kill $p
     done
