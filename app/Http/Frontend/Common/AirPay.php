@@ -22,6 +22,15 @@ use App\Common\HttpClient;
     代收查单接口：http://pay.qlairpay.com:10240/api/Order/QueryOrder
     代收余额接口：http://pay.qlairpay.com:10240/api/Order/QueryBalance
     回调IP：85.208.118.27
+
+    支付方式 网银转卡 限额11~3000
+    Kevin🔥, [Jan 27, 2023 at 8:29:38 PM]:
+    代收 1001 代付1000
+    文档里面都有标注
+
+    代收卡转卡，限额11-3000🔥
+    代付金额1000-19999🔥
+    代收入款资金 付款人与会员姓名不符合 500以上要原路退回
  */
 class AirPay extends BasePay implements PayInterface
 {
